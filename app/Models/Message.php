@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
+    public $fillable = ['message_content'];
 
-    public function users(){
-       return $this->belongsTo(Users::class);
+    public function user(){
+       return $this->belongsTo(User::class);
     }
 }
